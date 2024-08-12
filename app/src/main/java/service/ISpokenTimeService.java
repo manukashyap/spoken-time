@@ -1,4 +1,4 @@
-package src.main.java;
+package service;
 
 public interface ISpokenTimeService {
 }
