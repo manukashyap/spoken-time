@@ -28,3 +28,7 @@ replay_pid*
 out
 
 app/build
+
+.DS_Store
+
+java_pid*
