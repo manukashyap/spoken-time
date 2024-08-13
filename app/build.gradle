@@ -18,20 +18,15 @@ repositories {
 
 dependencies {
     implementation libs.guava
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.10.1'
 }
 
 run {
     standardInput = System.in
 }
-
-testing {
-    suites {
-        // Configure the built-in test suite
-        test {
-            // Use JUnit4 test framework
-            useJUnit('4.13.2')
-        }
-    }
+test {
+    // Use JUnit Platform for running tests
+    useJUnitPlatform()
 }
 
 application {

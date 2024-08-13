@@ -21,10 +21,12 @@ public class BritishSpokenTimeService implements ISpokenTimeService {
             return String.format("half past %s", NumberSpelling.fromNumber(hour));
         } else if (minute == 45) {
             return String.format("quarter to %s", NumberSpelling.fromNumber((hour % 12) + 1));
-        } else if (minute < 30) {
+        } else if (minute < 30 && minute % 5 == 0) {
             return String.format("%s past %s", NumberSpelling.fromNumber(minute), NumberSpelling.fromNumber(hour));
-        } else {
+        } else if (minute > 30 && minute % 5 == 0) {
             return String.format("%s to %s", NumberSpelling.fromNumber(60 - minute), NumberSpelling.fromNumber((hour % 12) + 1));
+        } else {
+            return String.format("%s %s", NumberSpelling.fromNumber(hour % 12), NumberSpelling.fromNumber(minute));
         }
     }
 }
