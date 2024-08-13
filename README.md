@@ -13,6 +13,21 @@ If you are on a Windows Machine, execute the following command.
 ```shell
 .\gradlew.bat --console plain run
 ```
+
+### User input 
+
+Once the app is run, you should be able to see a prompt as below asking you to input time in numeric format
+```
+> Task :app:run
+Enter time (HH:MM):
+```
+Please enter the time accordingly and press ENTER. Your converted time value should be displayed on screen. E.g.
+```
+> Task :app:run
+Enter time (HH:MM): 15:38
+Spoken time : three thirty eight
+```
+
 #### British Spoken Time
 
 Below are a few examples of British Spoken Time conversion
