@@ -1,5 +1,15 @@
 package com.smartbear.time.enums;
 
+/**
+ * The {@code NumberSpelling} enum provides a mapping between numeric values
+ * and their corresponding English word representations.
+ * <p>
+ * This enum is used to convert numeric values (from 1 to 59) into their
+ * spoken English equivalents. It is particularly useful in applications that
+ * require the display or conversion of numeric time values into a more
+ * human-readable form, such as "twenty five past six" or "quarter to eight".
+ * </p>
+ */
 public enum NumberSpelling {
     ONE(1, "one"),
     TWO(2, "two"),

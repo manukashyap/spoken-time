@@ -17,6 +17,10 @@ public class App {
 
     public static void main(String[] args) throws InvalidTimeException{
         BritishSpokenTimeService bt = new BritishSpokenTimeService();
-        new App().getSpokenTime(bt);
+        try {
+            new App().getSpokenTime(bt);
+        } catch (InvalidTimeException ex) {
+            System.out.println("Invalid time input detected. Please enter time in specified HH:MM format");
+        }
     }
 }
