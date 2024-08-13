@@ -4,18 +4,19 @@ package com.smartbear.time;/*
 
 import com.smartbear.time.exceptions.InvalidTimeException;
 import com.smartbear.time.models.NumericTime;
+import com.smartbear.time.service.ISpokenTimeService;
 import com.smartbear.time.service.dialects.british.BritishSpokenTimeService;
 import com.smartbear.time.service.io.UserInput;
 
 public class App {
-    private String getSpokenTime() throws InvalidTimeException {
+    private void getSpokenTime(ISpokenTimeService spokenTimeService) throws InvalidTimeException {
         UserInput input = UserInput.getInstance();
         NumericTime numericTime = input.getNumericTime();
-        BritishSpokenTimeService bt = new BritishSpokenTimeService();
-        bt.getSpokenTime(numericTime);
+        System.out.println("Spoken time : " + spokenTimeService.getSpokenTime(numericTime));
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getBritishTime());
+    public static void main(String[] args) throws InvalidTimeException{
+        BritishSpokenTimeService bt = new BritishSpokenTimeService();
+        new App().getSpokenTime(bt);
     }
 }

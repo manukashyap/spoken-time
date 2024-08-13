@@ -18,9 +18,10 @@ repositories {
 
 dependencies {
     implementation libs.guava
-    // Use the latest version of JUnit 5 for testing
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
 
+run {
+    standardInput = System.in
 }
 
 testing {
