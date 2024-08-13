@@ -1,4 +1,4 @@
-package enums;
+package com.smartbear.time.enums;
 
 public enum NumberSpelling {
     ONE(1, "one"),

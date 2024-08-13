@@ -17,8 +17,10 @@ repositories {
 }
 
 dependencies {
-    // This dependency is used by the application.
     implementation libs.guava
+    // Use the latest version of JUnit 5 for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
 }
 
 testing {
@@ -31,6 +33,12 @@ testing {
     }
 }
 
+application {
+    // Define the main class for the application.
+    mainClass = 'com.smartbear.time.App'
+}
+
+
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
@@ -38,7 +46,3 @@ java {
     }
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'org.example.App'
-}

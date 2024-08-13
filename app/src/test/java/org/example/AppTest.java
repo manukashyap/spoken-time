@@ -3,6 +3,7 @@
  */
 package org.example;
 
+import com.smartbear.time.App;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
